@@ -1,9 +1,14 @@
+import { Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import Home from "./pages/Home";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>CloneX</h1>
-      </header>
+    <div>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
