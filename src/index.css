@@ -2,12 +2,13 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "IBM Plex Sans Condensed", sans-serif;
+  background-color: #f5f5f5;
 }
 
 a {
@@ -26,4 +27,158 @@ a {
 
 .heading {
   margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 150px);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+  border-radius: 36px 24px 24px 24px;
+}
+.container::before {
+  content: "";
+  border-top: 85px solid #fff;
+  border-right: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+  border-left: 55px solid transparent;
+  width: 245px;
+  position: absolute;
+  height: 150px;
+  top: -8px;
+  right: 0px;
+  /* left: 388px; */
+  border-radius: 0px 24px 0px 0px;
+  z-index: -1;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  border-top: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom: 55px solid #fff;
+  border-left: 15px solid transparent;
+  width: 400px;
+  border-radius: 0px 0px 24px 0px;
+  /* top: 105px; */
+  bottom: -8px;
+  right: 0px;
+  z-index: -1;
+}
+
+.image-column {
+  position: relative;
+  left: -10px;
+  top: -10px;
+}
+.image-border {
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.2rem 0.4rem 12rem rgba(0, 0, 0, 0.08);
+  position: absolute;
+}
+.image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.ranking-container {
+  position: absolute;
+  border-top: 0 solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 55px solid #fff;
+  border-left: 0 solid transparent;
+  width: 110px;
+  top: 113px;
+  left: 10px;
+  border-radius: 0 0 0 24px;
+}
+.ranking-content {
+  position: absolute;
+  top: 120px;
+  left: 35px;
+}
+.ranking-text {
+  font-size: 12px;
+}
+.ranking-rank {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.name {
+  position: absolute;
+  font-size: 18px;
+  top: 10px;
+  left: 137px;
+  font-weight: 500;
+}
+
+.content-container {
+  position: absolute;
+  height: 130px;
+  width: 450px;
+  bottom: 0;
+  right: 0;
+  border-radius: 0 0 24px 0;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-content: space-between;
+  padding: 30px 20px 0px 0px;
+}
+
+.subheading {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.data {
+  margin-bottom: 8px;
+}
+
+.floor-data-one {
+  margin: 6.5px 0;
+  font-size: 24px;
+}
+.floor-data-two {
+  font-size: ;
+}
+
+.floorContainer {
+  grid-column: 1/2;
+}
+.weekContainer {
+  grid-column: 2/3;
+}
+.fluctuationContainer {
+  grid-column: 3/4;
+}
+.day90Container {
+  grid-column: 4/5;
+}
+.totalContainer {
+  grid-column: 5/6;
+}
+
+.total {
+  position: absolute;
+  top: -4px;
+  right: 34px;
+  font-size: 12px;
+  font-weight: 600;
 }
