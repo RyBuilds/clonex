@@ -9,7 +9,7 @@ function Home() {
     floor: 1.15,
     floorUSD: 954.06,
     weekPrice: 0.971,
-    weekVolume: 153.808,
+    weekVolume: 153.8,
     dayFluctuation: -24.0,
     weekFluctuation: 8.61,
     day90Price: 2270,
@@ -36,19 +36,19 @@ function Home() {
           <div className="floorContainer">
             <p className="subheading">FLOOR</p>
             <p className="floor-data-one">{data.floor}</p>
-            <p className="floor-data-two">{data.floorUSD}</p>
+            <p className="floor-data-two">${data.floorUSD}</p>
           </div>
           <div className="weekContainer">
             <p className="subheading">7D AVG. PRICE</p>
             <p className="data">{data.weekPrice}</p>
             <p className="subheading">7D VOLUME</p>
-            <p className="data">{data.weekVolume}</p>
+            <p className="data">{data.weekVolume}%</p>
           </div>
           <div className="fluctuationContainer">
             <p className="subheading">24HR %</p>
-            <p className="data">{data.dayFluctuation}</p>
+            <p className="data">{data.dayFluctuation}%</p>
             <p className="subheading">7D %</p>
-            <p className="data">{data.weekVolume}</p>
+            <p className="data">{data.weekVolume}%</p>
           </div>
           <div className="day90Container">
             <p className="subheading">90D AVG. PRICE</p>
